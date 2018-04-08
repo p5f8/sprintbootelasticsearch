@@ -1,7 +1,9 @@
-# es-java-client-sample
- Prerequisite : Java 8 and Later version 
+# SpringBootElasticSearch
+
+ Prerequisite : Java 8 or Later version 
 
 ### Start ElasticSearch
+
 1) Download elasticsearch from [here](https://www.elastic.co/downloads/elasticsearch)   
 2) Extract downloaded elasticsearch     
 3) cd elasticsearch-2.4.0       
