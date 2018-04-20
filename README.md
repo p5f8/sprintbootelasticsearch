@@ -34,33 +34,34 @@ Voylà!! All 5 dummy records are inserted into /customer/_doc
 
 P.S.: Use Kibana to search data
 
-Useful commands:
+####  Useful commands:
 
-GET /customer/_doc/_search
+	GET /customer/_doc/_search
 
-GET /customer/_doc/1
-GET /customer/_doc/2
-GET /customer/_doc/3
-GET /customer/_doc/4
-GET /customer/_doc/5
+	GET /customer/_doc/1
+	GET /customer/_doc/2
+	GET /customer/_doc/3
+	GET /customer/_doc/4
+	GET /customer/_doc/5
+	GET /customer/_doc/6
 
-GET /_cat/indices?v
+	GET /_cat/indices?v
 
 
 ### Endpoints avaiable to use
 
-http://localhost:8080/busca/{firstname}
-http://localhost:8080/busca/{firstname}/{lastname}
-http://localhost:8080/findall
-http://localhost:8080/loaddata
+	http://localhost:8080/busca/{firstname}
+	http://localhost:8080/busca/{firstname}/{lastname}
+	http://localhost:8080/findall
+	http://localhost:8080/loaddata
 
 
 
 ### Enjoy!!!
 
-References: 
-[https://projects.spring.io/spring-data-elasticsearch/]
-[https://github.com/spring-projects/spring-data-elasticsearch]
+References: <br />
+[https://projects.spring.io/spring-data-elasticsearch/] <br />
+[https://github.com/spring-projects/spring-data-elasticsearch] <br />
 
                   
 
