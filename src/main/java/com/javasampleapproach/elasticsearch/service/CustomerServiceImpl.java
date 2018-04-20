@@ -1,5 +1,7 @@
 package com.javasampleapproach.elasticsearch.service;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -31,12 +33,12 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public void carga() {
 
-		Customer cust_1 = new Customer("1", "Peter", "Smith", 20);
-		Customer cust_2 = new Customer("2", "Mary", "Taylor", 25);
-		Customer cust_3 = new Customer("3", "Peter", "Brown", 30);
-		Customer cust_4 = new Customer("4", "Lauren", "Taylor", 20);
-		Customer cust_5 = new Customer("5", "Lauren", "Jones", 45);
-		Customer cust_6 = new Customer("6", "Peter", "Williams", 20);
+		Customer cust_1 = new Customer("1", "Peter", "Smith", 20, getBirth(1979, 2, 10));
+		Customer cust_2 = new Customer("2", "Mary", "Taylor", 25, getBirth(1981, 1, 31));
+		Customer cust_3 = new Customer("3", "Peter", "Brown", 30, getBirth(1992, 7, 20));
+		Customer cust_4 = new Customer("4", "Lauren", "Taylor", 20, getBirth(1960, 12, 13));
+		Customer cust_5 = new Customer("5", "Lauren", "Jones", 45, getBirth(1977, 5, 6));
+		Customer cust_6 = new Customer("6", "Peter", "Williams", 20, getBirth(200, 3, 2));
 
 		// save customers to ElasticSearch
 		logger.info("===================Save Customers===================");
@@ -48,9 +50,24 @@ public class CustomerServiceImpl implements CustomerService {
 		repository.save(cust_6);
 	}
 
+	private Date getBirth(int year, int month, int day) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(year, month - 1, day);
+		calendar.set(Calendar.HOUR, 0);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND, 0);
+		calendar.set(Calendar.MILLISECOND, 0);
+		return calendar.getTime();
+	}
+
 	@Override
 	public List<Customer> findAll() {
 		return repository.findAll();
+	}
+
+	@Override
+	public List<Customer> findByBirth(Date birth) {
+		return repository.findByBirth(birth);
 	}
 
 	public void outrosMetodos() {

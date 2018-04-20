@@ -1,5 +1,6 @@
 package com.javasampleapproach.elasticsearch.repository;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -21,4 +22,6 @@ public interface CustomerRepository extends ElasticsearchRepository<Customer, St
     List<Customer> findByFirstnameAndLastname(String firstname, String lastname);
     
     List<Customer> findAll();
+
+	List<Customer> findByBirth(Date birth);
 }
