@@ -3,7 +3,7 @@ package com.javasampleapproach.elasticsearch.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "javasampleapproach", type = "customer")
+@Document(indexName = "customer", type = "_doc")
 public class Customer {
 
 	@Id
