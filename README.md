@@ -7,7 +7,7 @@
 ### Prepare ElasticSearch and Kibana
 
 01) Download elasticsearch 6.2.4 from [here](https://www.elastic.co/downloads/elasticsearch)
-02) Download Kibana 6.2.4 from [here] (https://www.elastic.co/downloads/kibana)
+02) Download Kibana 6.2.4 from [here](https://www.elastic.co/downloads/kibana)
 03) Extract elasticsearch-6.2.4.zip
 04) Extract kibana-6.2.4.zip     
 05) Run: elasticsearch-6.2.4\bin\elasticsearch.bat
@@ -60,8 +60,8 @@ P.S.: Use Kibana to search data
 ### Enjoy!!!
 
 References: <br />
-[https://projects.spring.io/spring-data-elasticsearch/] <br />
-[https://github.com/spring-projects/spring-data-elasticsearch] <br />
+https://projects.spring.io/spring-data-elasticsearch/ <br />
+https://github.com/spring-projects/spring-data-elasticsearch <br />
 
                   
 
