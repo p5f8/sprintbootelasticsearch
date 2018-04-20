@@ -47,3 +47,9 @@ GET /_cat/indices?v
 
 ### Enjoy!!!
 
+References: 
+[https://projects.spring.io/spring-data-elasticsearch/]
+[https://github.com/spring-projects/spring-data-elasticsearch]
+
+                  
+
