@@ -19,4 +19,6 @@ public interface CustomerRepository extends ElasticsearchRepository<Customer, St
     List<Customer> findByAge(int age);
     
     List<Customer> findByFirstnameAndLastname(String firstname, String lastname);
+    
+    List<Customer> findAll();
 }

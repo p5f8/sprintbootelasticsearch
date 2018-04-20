@@ -12,4 +12,5 @@ public interface CustomerService {
 	
 	List<Customer> findByFirstnameAndLastname(String firstname, String lastname);
 	
+	List<Customer> findAll();
 }

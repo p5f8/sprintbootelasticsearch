@@ -48,6 +48,11 @@ public class CustomerServiceImpl implements CustomerService {
 		repository.save(cust_6);
 	}
 
+	@Override
+	public List<Customer> findAll() {
+		return repository.findAll();
+	}
+
 	public void outrosMetodos() {
 		//
 		// // find a Customer by Id

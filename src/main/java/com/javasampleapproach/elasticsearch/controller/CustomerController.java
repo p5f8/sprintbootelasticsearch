@@ -32,6 +32,12 @@ public class CustomerController {
 		logger.info("BuscaNomeEndereco: [" + nome + ", " + sobrenome + "]");
 		return service.findByFirstnameAndLastname(nome, sobrenome);
 	}
+	
+	@RequestMapping("/findall")
+	public List<Customer> findAll() {
+		logger.info("Findall called....");
+		return service.findAll();
+	}
 
 	@RequestMapping("/loaddata")
 	public void carga() {

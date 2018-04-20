@@ -1,8 +1,10 @@
-# SpringBootElasticSearch
+# Spring Boot ElasticSearch POC
 
- Prerequisite : Java 8 or Later version 
+ Prerequisite : JDK 8 or Later version,
+                Maven 3 and
+                enough space in hard disk.
 
-### Start ElasticSearch
+### Prepare ElasticSearch and Kibana
 
 01) Download elasticsearch 6.2.4 from [here](https://www.elastic.co/downloads/elasticsearch)
 02) Download Kibana 6.2.4 from [here] (https://www.elastic.co/downloads/kibana)
@@ -12,7 +14,7 @@
 06) Run: kibana-6.2.4\bin\kibana.bat
 
 
-### Run project as a Sprint Boot App
+### Run project as a Sprint Boot App or thru Eclipse/STS (Spring Tool Suite)
     $ mvn clean install
     $ mvn spring-boot:run
 
@@ -43,6 +45,15 @@ GET /customer/_doc/4
 GET /customer/_doc/5
 
 GET /_cat/indices?v
+
+
+### Endpoints avaiable to use
+
+http://localhost:8080/busca/{firstname}
+http://localhost:8080/busca/{firstname}/{lastname}
+http://localhost:8080/findall
+http://localhost:8080/loaddata
+
 
 
 ### Enjoy!!!
