@@ -24,8 +24,8 @@ public class CustomerController {
 
 	@RequestMapping("/busca/{nome}")
 	public List<Customer> buscaNome(@PathVariable("nome") String nome) {
-		logger.info("BuscaNome: [" + nome + "]");
-		return service.findByFirstname(nome);
+		logger.info("BuscaNome: [" + nome + "*]");
+		return service.findByFirstname(nome + "*"); // TODO: That isn't a good way to implement this. Search for keyword and analyzers. 
 	}
 
 	@RequestMapping("/busca/{nome}/{sobrenome}")
